@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_testlayout.cshtml";
+}
+
+<div class="container-fluid">
+    <h2 style="text-align:center;">İletişim Sayfası</h2>
+
+    <form method="post" class="form-group">
+        <label>Ad</label>
+        <input type="text" name="Ad" class="form-control" required /> <br />
+
+        <label>Soyad</label>
+        <input type="text" name="Soyad" class="form-control"required /> <br />
+
+        <label>Şehir</label>
+        <input type="text" name="Sehir" class="form-control" required/><br />
+
+        <label>Mail</label>
+        <input type="text" name="Mail" class="form-control" required/><br />
+
+        <label>Konu</label>
+        <input type="text" name="Baslik" class="form-control"required /><br />
+
+        <label>Mesaj</label>
+        <textarea class="form-control" name="Mesaj" rows="5"></textarea><br />
+
+       
+
+        <button class="btn btn-primary">Mesajı Gonder</button><br />
+
+    </form>
+</div>
+

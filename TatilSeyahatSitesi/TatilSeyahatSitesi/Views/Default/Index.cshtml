@@ -1,0 +1,104 @@
+﻿@using TatilSeyahatSitesi.Models.Siniflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_testlayout.cshtml";
+}
+
+
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+
+    
+    
+    <div class="header-banner" style="width:100%; height:100%">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot" style="margin-left:80px;">Tatil Seyahat Bloğum</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/webts/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p><a style="color:black;text-decoration:none;" href="https://www.google.com/search?rlz=1C1FKPE_trTR1000TR1000&tbs=lf:1,lf_ui:9&tbm=lcl&q=bana+yak%C4%B1n+restoranlar&rflfq=1&num=10&sa=X&ved=2ahUKEwjfscPtoon6AhWeVfEDHXeeCRkQjGp6BAgLEAE&biw=1920&bih=929&dpr=1#rlfi=hd:;si:;mv:[[40.787351099999995,30.4091388],[40.62089220000001,30.259665499999993]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:9">Restaurantlar</a></p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/webts/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p><a style="color:black;text-decoration:none;" href="https://www.google.com/search?q=ucuz+u%C3%A7ak+bileti&rlz=1C1FKPE_trTR1000TR1000&biw=1920&bih=929&tbm=lcl&ei=qQQcY6DiHf_Axc8PpsGouAs&oq=ucuz+u%C3%A7ak+bileti&gs_l=psy-ab.3..0i512i433k1j0i67k1j0i512k1l8.8284.12081.0.12505.16.9.0.7.7.0.138.982.1j8.9.0....0...1c.1.64.psy-ab..0.16.1029...0i433i67k1j0i512i433i131k1j0i433k1j0i512i433i457k1.0.qNFQaxF4Jj4#rlfi=hd:;si:;mv:[[41.1308112,30.0122059],[40.73847320000001,28.3637712]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:14">Uçuşlar</a></p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/webts/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p><a style="color:black;text-decoration:none;" href="https://www.google.com/search?q=yap%C4%B1lacak+aktiviteler&rlz=1C1FKPE_trTR1000TR1000&biw=1920&bih=929&tbm=lcl&ei=tgQcY4_qM6G8xc8P68CdoA4&oq=yap%C4%B1lacak&gs_l=psy-ab.3.0.0i512k1l10.90872.92084.0.94153.9.7.0.2.2.0.142.792.1j6.7.0....0...1c.1.64.psy-ab..0.9.806...0i512i433i131k1j0i433i131k1j0i512i433k1j0i433i131i67k1j0i433i67k1j0i67k1j0i433k1.0.pRspwakJLq8#rlfi=hd:;si:;mv:[[40.84859,30.502784499999997],[40.5778671,29.9374924]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:1">Yapılacak Şeyler</a></p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/webts/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p><a style="color:black;text-decoration:none;" href="https://www.google.com/search?q=ara%C3%A7+kiralama&rlz=1C1FKPE_trTR1000TR1000&biw=1920&bih=929&tbm=lcl&ei=mwUcY8C3O_u7xc8PpZud2Ak&oq=ara%C3%A7&gs_l=psy-ab.3.0.0i512i433k1j0i512k1j0i433k1j0i433i131k1j0i512i433i131k1j0i67k1j0i512i433k1j0i512i433i131k1j0i512i433k1l2.1239.1712.0.4401.4.4.0.0.0.0.126.452.0j4.4.0....0...1c.1.64.psy-ab..0.4.450...0i10i67k1.0.1H1JXNAEIhA#rlfi=hd:;si:;mv:[[40.783406899999996,30.425468899999995],[40.6856424,30.2183124]];tbs:lrf:!1m4!1u3!2m2!3m1!1e1!1m4!1u2!2m2!2m1!1e1!2m1!1e2!2m1!1e3!3sIAE,lf:1,lf_ui:2">Araç Kiralama</a></p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider">
+                            <ul class="rslides" id="slider1">
+                                @foreach(var x in Model)
+                                {
+
+
+                                <li><img src="@x.BlogImage" alt="" style="width:650px; height:450px"></li>
+                                }
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Tatil Seyahat Bloğuna Hoş Geldiniz.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facil</p>
+                </div>
+                @Html.Action("Partial1","Default")
+                <div class="grids">
+                    <div class="box1">
+                        @Html.Action("Partial3", "Default")
+                        @Html.Action("Partial4", "Default")
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+

@@ -1,0 +1,35 @@
+﻿@using TatilSeyahatSitesi.Models.Siniflar
+@model List<iletisim>
+@{
+    ViewBag.Title = "iletisim";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<br />
+
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Mail</th>
+        <th>Başlık</th>
+        
+
+    </tr>
+
+    @foreach (var x in Model)
+    {
+
+    <tr>
+        <td>@x.iletisimId</td>
+        <td>@x.Ad</td>
+        <td>@x.Soyad</td>
+        <td>@x.Mail</td>
+        <td><a href="/Admin/MesajaGit/@x.iletisimId" style="color:black; text-decoration:none;">@x.Baslik</a></td>
+
+    </tr>
+    }
+</table>
+
+

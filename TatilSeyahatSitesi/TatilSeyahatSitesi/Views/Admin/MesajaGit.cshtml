@@ -1,0 +1,32 @@
+﻿@model TatilSeyahatSitesi.Models.Siniflar.iletisim
+
+@{
+    ViewBag.Title = "MesajaGit";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<br />
+<h4>Mesaj Görüntüleme Sayfası</h4>
+<br />
+
+@using (Html.BeginForm("Mesajagit", "Admin", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.LabelFor(x => x.Baslik, new { @style = "font-weight:700;" })
+
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+
+        @Html.LabelFor(x => x.Mesaj, new { @style = "font-weight:700;" })
+
+        @Html.TextAreaFor(x => x.Mesaj, new { @class = "form-control" })
+
+        @Html.HiddenFor(x => x.iletisimId)
+
+       
+
+    </div>
+
+    <button class="btn btn-primary">Güncelle</button>
+}
+
+

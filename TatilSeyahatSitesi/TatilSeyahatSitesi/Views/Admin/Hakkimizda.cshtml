@@ -1,0 +1,14 @@
+﻿@using TatilSeyahatSitesi.Models.Siniflar
+@model List<Hakkimizda>
+@{
+    ViewBag.Title = "Hakkimizda";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h2>Hakkimizda</h2>
+
+<br />
+
+
+    @foreach (var x in Model) 
+    { <h4>@x.Aciklama</h4>}
